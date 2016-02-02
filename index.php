@@ -64,6 +64,7 @@ require('user_registration.php');
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <?php
+                            //HIDE LOGIN BUTTON ONCE LOGGED IN
                             if (isset($_POST['firstname'])) {
                                 
                             } else {
@@ -100,12 +101,13 @@ require('user_registration.php');
 
                         </li>
 
-
-                        <!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
+<!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
                         <li class="dropdown">
-
+                            
+<!--SET STATUS OF USER, SIGNED IN OR OUT-->
                             <a href="" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo($loginStatus); ?></b> <span class="caret"></span></a>
-
+                            
+<!--HIDE REGISTER BUTTON AND FORM ONCE LOGGED IN-->
 <?php
 if (isset($_POST['firstname'])) {
     

@@ -4,7 +4,8 @@ if (isset($_POST['firstname'])) {
     print_r($_POST);
     $pwd = $_POST['password'];
     
-    $loginStatus = 'Logoff';
+    //$loginStatus used only for button label
+    $loginStatus = 'Logoff ' . $_POST['firstname'] ;
 
 
     //create sql statement
@@ -62,6 +63,7 @@ if (isset($_POST['firstname'])) {
     $sqlh->execute();
 }
      else{
+         //$loginStatus used only for button label
          $loginStatus = 'Register';
      }
 
