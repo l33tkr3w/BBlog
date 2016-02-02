@@ -1,5 +1,7 @@
 <?php
 require('host.php');
+require('user_registration.php');
+
 ?>
 
 <html lang="en">
@@ -108,47 +110,47 @@ require('host.php');
                                                         <table width="350px">
                                                             <tr> 
                                                                 <td valign="top"> 
-                                                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+                                                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>   
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+                                                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>  
                                                                 <td valign="top">
-                                                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
                                                                 </td>
                                                             <tr>  
                                                                 <td valign="top">
-                                                                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                                
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="address" placeholder="Street Address" required>
+                                                                    <input type="text" class="form-control" id="address" name="address" placeholder="Street Address" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                              
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                                                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                                
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="state" placeholder="State" required>
+                                                                    <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                               
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="zip" placeholder="Zipcode" required>
+                                                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Zipcode" required>
                                                                 </td>
                                                             </tr>
 

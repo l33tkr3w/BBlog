@@ -1,9 +1,7 @@
 <?php
 
-require "host.php";
-print_r($_POST);
-
 if (isset($_POST['firstname'])) {
+    print_r($_POST);
     $pwd = $_POST['password'];
 
 
@@ -61,99 +59,6 @@ if (isset($_POST['firstname'])) {
     //excecute the sqlstatement
     $sqlh->execute();
 }
+     
 
-//FORM      
-else {
-
-    echo"
-        <div id='data'>
-
-<form method='POST' action='user_registration.php' >
-            
-                <table width='450px'>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'firstname'>First Name *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'firstname' value = '' maxlength = '50' size = '30'>
-    </td>
-    </tr>
-
-    <tr>
-    <td valign = 'top'>
-    <label for = 'lastname'>Last Name *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'lastname' value = '' maxlength = '50' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'email'>Email Address *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'email' value = '' maxlength = '80' size = '30'>
-    </td>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'email'>Password *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'password' name = 'password' value = '' maxlength = '80' size = '30'>
-    </td>
-
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>Address</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'address' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>City</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'city' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>State</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'state' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>Zip</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'zip' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-
-    </tr>
-    <tr>
-    <td colspan = '2' style = 'text-align:center'>
-    <input type = 'submit' value = 'Submit'>
-    </td>
-    </tr>
-    </table>
-    
-
-    </form> 
-    
-    </div>";
-    
-    
-    
-    
-    
-}
 ?>
