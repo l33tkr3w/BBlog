@@ -3,6 +3,8 @@
 if (isset($_POST['firstname'])) {
     print_r($_POST);
     $pwd = $_POST['password'];
+    
+    $loginStatus = 'Logoff';
 
 
     //create sql statement
@@ -59,6 +61,8 @@ if (isset($_POST['firstname'])) {
     //excecute the sqlstatement
     $sqlh->execute();
 }
-     
+     else{
+         $loginStatus = 'Register';
+     }
 
 ?>

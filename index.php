@@ -1,7 +1,6 @@
 <?php
 require('host.php');
 require('user_registration.php');
-
 ?>
 
 <html lang="en">
@@ -64,16 +63,21 @@ require('user_registration.php');
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                            <?php
+                            if (isset($_POST['firstname'])) {
+                                
+                            } else {
+                                echo('<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                             <ul id="login-dp" class="dropdown-menu">
                                 <li>
                                     <div class="row">
-                                        <div class="col-md-12" >                                      
+                                        <div class="col-md-12" >  
+                                            
                                             <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 
                                                 <div class="form-group">
                                                     <label class="sr-only" for="Username">Login</label>
-                                                    <input type="email" class="form-control" id="Username" placeholder="Username" required>
+                                                    <input type="text" class="form-control" id="Username" placeholder="Username" required>
                                                 </div>
 
                                                 <div class="form-group">
@@ -90,16 +94,23 @@ require('user_registration.php');
                                         </div>                                      
                                     </div>
                                 </li>
-                            </ul>
+                            </ul>');
+                            }
+                            ?>
+
                         </li>
 
 
                         <!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
                         <li class="dropdown">
 
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><b>Register</b> <span class="caret"></span></a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo($loginStatus); ?></b> <span class="caret"></span></a>
 
-                            <ul id="login-dp" class="dropdown-menu">
+<?php
+if (isset($_POST['firstname'])) {
+    
+} else {
+    echo('<ul id="login-dp" class="dropdown-menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">                                      
@@ -167,7 +178,11 @@ require('user_registration.php');
                                                 </div>
                                         </div>
                                 </li>
-                            </ul>
+                            </ul>');
+}
+?>
+
+
                         </li>
                     </ul>
                 </div>
@@ -183,11 +198,11 @@ require('user_registration.php');
         </div>
 
         <hr>
-        
+
         <div class="well">
-            
+
             <h4 class="media-heading">Title</h4>
-            
+
             <div class="media">             
                 <a>
                     <img class="img-responsive" src="assets/img/beer-color-spectrum.jpg" width="100%">
@@ -202,7 +217,7 @@ require('user_registration.php');
                         <span><i class="glyphicon glyphicon-comment"></i> Comments </span>
                         <li>|</li>
                         <li>
-                                                                                                             <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star"></span>
@@ -223,7 +238,7 @@ require('user_registration.php');
                     <img class="media-object" src="assets/img/beer2.jpg">
                 </a>
                 <div class="media-body">
-                    
+
                     <p class="text-right">Username</p>
                     <p>Random blog post</p>
                     <ul class="list-inline list-unstyled">
