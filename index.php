@@ -183,13 +183,12 @@ if (isset($_POST['firstname'])) {
                             </ul>');
 }
 ?>
-
-
                         </li>
                     </ul>
                 </div>
             </div>
-        </div></div>
+        </div>
+    </div>
 
 
     <div class="container">
