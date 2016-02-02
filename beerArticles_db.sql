@@ -8,7 +8,7 @@ CREATE TABLE tbl_Articles
     (email VARCHAR(100) NOT NULL,
      title VARCHAR(50) NOT NULL,
      textContent VARCHAR (100)NOT NULL,
-     username VARCHAR(100)NOT NULL,
+     firstname VARCHAR(100)NOT NULL,
      image VARCHAR (100)NOT NULL,
      time VARCHAR (50)NOT NULL,
      removable VARCHAR (50)NOT NULL,
