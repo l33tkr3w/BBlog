@@ -1,16 +1,12 @@
 <?php
-
 //This php code is intended to grab all the information from the db and populate the fields. It will do this for all available articles.
-
 //Need to create a new table for storing user content  - NEEDS TO BE DONE STILL
-
 $title = 'blah'; //Title of the article
 $textContent = 'blah'; //Text Content of the article
 $username = 'blah'; //Name of the user who created article
 $image = 'blah'; //Optional image for article
 $time = 'blah'; //Time the article was created
 $removable = 'blah'; //Tag used for displaying "Remove Article" for Original Posters articles only. 
-
 
 echo('<div class="well">
 
@@ -44,6 +40,5 @@ echo('<div class="well">
                 </div>
             </div>
         </div>')
-
 ?>
 
