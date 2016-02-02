@@ -6,6 +6,9 @@ Re imported project as a php project. | 1 hour
 Implemented user registration dropdown.  | 30 min
 Altered create post dropdown | 30 min
 Implemented video background | 30 min
+
+Implemented Login Status, | 1 hour
+Fixed User registration | 1 hour
 ________________________________________________________________________________
 
 
