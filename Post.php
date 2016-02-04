@@ -2,14 +2,10 @@
 
 //This php code is intended to grab all the information from the db and populate the fields. It will do this for all available articles.
 //Need to create a new table for storing user content  - NEEDS TO BE DONE STILL
-
-
  
 //mockup Select statement to grab Articles from DB
 $result = mysql_query("SELECT * FROM tbl_Articles");
 $rowcount = mysql_num_rows($result);
-
-
 
 // Get title, text, username, image, time and removable from tbl_Articles,
 for ($i = 0; $i < $rowcount; $i++) 
@@ -28,7 +24,7 @@ for ($i = 0; $i < $rowcount; $i++)
     $removable = 'SELECT removable FROM tbl_Articles WHERE email == $_POST["email]';
     
     
-    // $Article to html template, requires bootstrap.css to view correctly.
+    // $Article -> html template
     $Article += 'echo("<div class="well">
 
             <h4 class="media-heading">' . $title . '</h4>
@@ -65,6 +61,5 @@ for ($i = 0; $i < $rowcount; $i++)
     
 }
 echo($Article);
-
 ?>
 
