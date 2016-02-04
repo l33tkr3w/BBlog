@@ -28,7 +28,7 @@ for ($i = 0; $i < $rowcount; $i++)
     $removable = 'SELECT removable FROM tbl_Articles WHERE email == $_POST["email]';
     
     
-    //Sets $Article to html template, requires bootstrap.css to view correctly.
+    // $Article to html template, requires bootstrap.css to view correctly.
     $Article += 'echo("<div class="well">
 
             <h4 class="media-heading">' . $title . '</h4>
