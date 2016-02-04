@@ -24,7 +24,7 @@ require('user_registration.php');
 
     <style type="text/css">
         body { 
-            background: #384452 !important; 
+            background: #384452 !important;  //MEANS OVERWRITE BOOTSSTRAP.css arguments
         } 
 
         .dropdown-menu {
@@ -55,8 +55,8 @@ require('user_registration.php');
                             <ul class="dropdown-menu">
                                 <!-- Dropdown for creating a new post
                                 Creates a textarea inside the dropdown-->
-                                <li><a href="#" onClick="MyWindow = window.open('create.php', 'MyWindow', width = 600, height = 300);
-                                        return false;">Create New Post</a></li>                                  
+                                <li>
+                                        return false;"><textarea class="FormElement" name="term" id="term" cols="95" rows="4"></textarea></a></li>                                  
                             </ul>
                         </li>
                     </ul>                     
