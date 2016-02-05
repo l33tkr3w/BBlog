@@ -274,9 +274,8 @@ if (isset($_POST['firstname'])) {
     </div>
 
 <?php
-require('host.php');
+require('post.php');
 ?>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
