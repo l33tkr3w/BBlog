@@ -18,7 +18,7 @@ while ($row = $result_edit->fetch()) {
                 </a>
                 <div class="media-body">               
                     <p class="text-right">' .  $row['email'] . '</p>
-                    <p>Random blog post</p>                  
+                    <p>' . $row['textContent'] . '</p>                  
                 </div>
             </div>
         </div>")';
