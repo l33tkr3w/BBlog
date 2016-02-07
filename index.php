@@ -24,7 +24,7 @@ require('user_registration.php');
 
     <style type="text/css">
         body { 
-            background: #384452 !important;  //MEANS OVERWRITE BOOTSSTRAP.css arguments
+            background: #384452 !important; 
         } 
 
         .dropdown-menu {
@@ -48,11 +48,10 @@ require('user_registration.php');
                 </div>
 
                 <div class="navbar-collapse collapse navbar-right">
-                     <ul class="nav navbar-nav">
-<!--Only display Create Post dropdown menu when user is logged in -->
-                    <?php
-                    if (isset($_POST['firstname'])) {
-                        echo('<ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
+<?php
+                        if (isset($_POST['firstname'])) {
+                            echo('<ul class="nav navbar-nav">
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">New Post <b class="caret"></b></a>
@@ -68,24 +67,24 @@ require('user_registration.php');
                         </li>
                         </ul>  
                     </ul>');
-                    }
-                    ?>
-                                         
+                        }
+                        ?>
+                                          
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-<?php
-//HIDE LOGIN BUTTON ONCE LOGGED IN
-if (isset($_POST['firstname'])) {
-    
-} else {
-    echo('<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                            <?php
+                            //HIDE LOGIN BUTTON ONCE LOGGED IN
+                            if (isset($_POST['firstname'])) {
+                                
+                            } else {
+                                echo('<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                             <ul id="login-dp" class="dropdown-menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12" >  
                                             
-                                            <form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
+                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 
                                                 <div class="form-group">
                                                     <label class="sr-only" for="Username">Login</label>
@@ -107,18 +106,18 @@ if (isset($_POST['firstname'])) {
                                     </div>
                                 </li>
                             </ul>');
-}
-?>
+                            }
+                            ?>
 
                         </li>
 
-                        <!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
+<!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
                         <li class="dropdown">
-
-                            <!--SET STATUS OF USER, SIGNED IN OR OUT-->
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><b> <?php echo($loginStatus); ?> </b> <span class="caret"></span></a>
-
-                            <!--HIDE REGISTER BUTTON AND FORM ONCE LOGGED IN-->
+                            
+<!--SET STATUS OF USER, SIGNED IN OR OUT-->
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo($loginStatus); ?></b> <span class="caret"></span></a>
+                            
+<!--HIDE REGISTER BUTTON AND FORM ONCE LOGGED IN-->
 <?php
 if (isset($_POST['firstname'])) {
     
@@ -274,10 +273,6 @@ if (isset($_POST['firstname'])) {
             </div>
         </div>
     </div>
-
-<?php
-require('post.php');
-?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
