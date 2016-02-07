@@ -49,19 +49,19 @@ require('user_registration.php');
 
                 <div class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
-<?php
+
+                        <?php
                         if (isset($_POST['firstname'])) {
                             echo('<ul class="nav navbar-nav">
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">New Post <b class="caret"></b></a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">New Post <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li>
-                                return false;"><textarea class="FormElement" name="term" id="term"
-                                    <input type="text" class="form-control" id="Title" placeholder="Title" required>
+                                <li>                            
+                                    <input type="text" class="form-control" id="Title" placeholder="Title" required />
                                     <textarea class="FormElement" name="term" id="term" cols="36" rows="7" placeholder="Article Text"></textarea>
                                     <input type="text" class="form-control" id="Image" placeholder="Enter an Image URL or select Browse">
-                                    <input type="file" name="Image" value="" width="37" />
+                                    <input type="file" name="Image" value="" width="37">
                                 </li>                                  
                             </ul>
                         </li>
@@ -69,22 +69,22 @@ require('user_registration.php');
                     </ul>');
                         }
                         ?>
-                                          
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <?php
-                            //HIDE LOGIN BUTTON ONCE LOGGED IN
-                            if (isset($_POST['firstname'])) {
-                                
-                            } else {
-                                echo('<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <?php
+                                //HIDE LOGIN BUTTON ONCE LOGGED IN
+                                if (isset($_POST['firstname'])) {
+                                    
+                                } else {
+                                    echo('<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                             <ul id="login-dp" class="dropdown-menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12" >  
                                             
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="login-nav">
 
                                                 <div class="form-group">
                                                     <label class="sr-only" for="Username">Login</label>
@@ -106,23 +106,23 @@ require('user_registration.php');
                                     </div>
                                 </li>
                             </ul>');
-                            }
-                            ?>
+                                }
+                                ?>
 
-                        </li>
+                            </li>
 
-<!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
-                        <li class="dropdown">
-                            
-<!--SET STATUS OF USER, SIGNED IN OR OUT-->
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo($loginStatus); ?></b> <span class="caret"></span></a>
-                            
-<!--HIDE REGISTER BUTTON AND FORM ONCE LOGGED IN-->
-<?php
-if (isset($_POST['firstname'])) {
-    
-} else {
-    echo('<ul id="login-dp" class="dropdown-menu">
+                            <!-- USER REGISTRATION DROPDOWN, Shows user registration drop down menu. -->
+                            <li class="dropdown">
+
+                                <!--SET STATUS OF USER, SIGNED IN OR OUT-->
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown"><b><?php echo($loginStatus); ?></b> <span class="caret"></span></a>
+
+                                <!--HIDE REGISTER BUTTON AND FORM ONCE LOGGED IN-->
+                                <?php
+                                if (isset($_POST['firstname'])) {
+                                    
+                                } else {
+                                    echo('<ul id="login-dp" class="dropdown-menu">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">                                      
@@ -191,10 +191,10 @@ if (isset($_POST['firstname'])) {
                                         </div>
                                 </li>
                             </ul>');
-}
-?>
-                        </li>
-                    </ul>
+                                }
+                                ?>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </div>
