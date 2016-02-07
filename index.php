@@ -48,7 +48,7 @@ require('user_registration.php');
                 </div>
 
                 <div class="navbar-collapse collapse navbar-right">
-                    
+                     <ul class="nav navbar-nav">
 <!--Only display Create Post dropdown menu when user is logged in -->
                     <?php
                     if (isset($_POST['firstname'])) {
@@ -58,6 +58,7 @@ require('user_registration.php');
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">New Post <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
+                                return false;"><textarea class="FormElement" name="term" id="term"
                                     <input type="text" class="form-control" id="Title" placeholder="Title" required>
                                     <textarea class="FormElement" name="term" id="term" cols="36" rows="7" placeholder="Article Text"></textarea>
                                     <input type="text" class="form-control" id="Image" placeholder="Enter an Image URL or select Browse">
@@ -65,6 +66,7 @@ require('user_registration.php');
                                 </li>                                  
                             </ul>
                         </li>
+                        </ul>  
                     </ul>');
                     }
                     ?>
