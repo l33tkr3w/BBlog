@@ -1,6 +1,13 @@
 <?php
 require('host.php');
 require('user_registration.php');
+//Need to implement login button form submission, check db is user exists. If user exists, then log user in
+//If user does not exist, then error message.
+//Need to check if $_POST['email'] matches a user in database.
+
+
+
+
 ?>
 
 <html lang="en">

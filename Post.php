@@ -4,6 +4,15 @@ $sql_selectEdit = "SELECT email, title, textContent, image, removable, user_ID "
         . " FROM tbl_Articles "
         . " ORDER BY title";
 
+//$sql_userLogin = "SELECT email From tbl_blog";
+//$result_userLogin = $pdo->query($sql_userLogin);
+//
+//while ($row = $result_userLogin->fetch()) {
+//    
+//    $loggedInUser = 
+//}
+
+
 $result_edit = $pdo->query($sql_selectEdit);
 
 while ($row = $result_edit->fetch()) {
