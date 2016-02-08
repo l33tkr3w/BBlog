@@ -5,6 +5,7 @@ if (isset($_POST['firstname'])) {
     $pwd = $_POST['password'];
     
     //$loginStatus used only for button label
+    
     $loginStatus = 'Logoff &nbsp;' . $_POST['email'] ;
 
 

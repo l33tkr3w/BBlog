@@ -78,7 +78,7 @@ require('user_registration.php');
                                 if (isset($_POST['firstname'])) {
                                     
                                 } else {
-                                    echo('<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                                    echo('<a href="" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                             <ul id="login-dp" class="dropdown-menu">
                                 <li>
                                     <div class="row">
